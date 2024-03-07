@@ -29,9 +29,13 @@ function App() {
     fetchData();
   }, []);
 
-
+  if(courses === null){
+    return (
+      <p>Data Not Found</p>
+    )
+  }
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-zinc-800">
       <div>
       <Navbar/>
       </div>
