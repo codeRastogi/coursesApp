@@ -5,6 +5,8 @@ import {apiUrl, filterData} from "./data";
 import { toast } from "react-toastify";
 import Cards from "./components/Cards";
 import Spinner from "./components/Spinner";
+import PageNotFound from "./components/PageNotFound";
+
 
 function App() {
 
@@ -31,7 +33,7 @@ function App() {
 
   if(courses === null){
     return (
-      <p>Data Not Found</p>
+      <PageNotFound/>
     )
   }
   return (
